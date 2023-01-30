@@ -1,0 +1,30 @@
+go mod init <YOUR API NAME>   --> e.g: github.com/local/test/api
+go mod tidy
+
+go build main.go
+
+install a package: go get <PACKAGE NAME>
+
+Uber FX
+go get go.uber.org/fx
+
+Download Swag
+go get -u github.com/swaggo/swag/cmd/swag
+
+Run the Swag at your Go project root path
+swag init
+
+Download gin-swagger 
+go get -u github.com/swaggo/gin-swagger
+go get -u github.com/swaggo/files
+
+Gin
+go get github.com/gin-gonic/gin
+
+Cors
+github.com/rs/cors/wrapper/gin
+
+Viper
+go get github.com/spf13/viper
+
+go get github.com/joho/godotenv

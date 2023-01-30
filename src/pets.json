@@ -1,0 +1,122 @@
+[
+ {
+  "id": "a9dbb813-8ac8-4365-8acb-923878b7b437",
+  "name": "Lupe",
+  "createdAt": "2023-01-27T11:44:02.0268285-05:00",
+  "updatedAt": "2023-01-27T16:43:17.101Z",
+  "specie": "Dog",
+  "sex": "Female",
+  "breed": "Poodle",
+  "age": 1
+ },
+ {
+  "id": "df78a87b-2a21-4480-aa43-d90dd85ff8c9",
+  "name": "Canela",
+  "createdAt": "2023-01-27T11:44:31.5572417-05:00",
+  "updatedAt": "2023-01-27T16:43:17.101Z",
+  "specie": "Dog",
+  "sex": "Female",
+  "breed": "Labrador Retriever",
+  "age": 1.9
+ },
+ {
+  "id": "39776a20-bbff-4b72-884f-27b6e44c422e",
+  "name": "Donna",
+  "createdAt": "2023-01-27T11:45:25.7729058-05:00",
+  "updatedAt": "2023-01-30T14:59:12-05:00",
+  "specie": "Dog",
+  "sex": "Female",
+  "breed": "Siberian Husky",
+  "age": 12.5
+ },
+ {
+  "id": "842c6e0f-a9bf-41bc-a648-a73d918e1bb9",
+  "name": "Molly",
+  "createdAt": "2023-01-27T11:46:26.6769726-05:00",
+  "updatedAt": "2023-01-27T16:43:17.101Z",
+  "specie": "Dog",
+  "sex": "Female",
+  "breed": "Border Collie",
+  "age": 4.5
+ },
+ {
+  "id": "8fd05995-1daa-4f76-b395-5134bcbe7e15",
+  "name": "Duvan",
+  "createdAt": "2023-01-27T11:46:56.6840272-05:00",
+  "updatedAt": "2023-01-27T16:43:17.101Z",
+  "specie": "Dog",
+  "sex": "Male",
+  "breed": "Airedale Terrier",
+  "age": 14
+ },
+ {
+  "id": "76b9ae1a-4a4a-4f2a-96d7-016eff4ab207",
+  "name": "Grindol",
+  "createdAt": "2023-01-27T11:48:10.9511626-05:00",
+  "updatedAt": "2023-01-27T16:43:17.101Z",
+  "specie": "Dog",
+  "sex": "Male",
+  "breed": "French Bulldog",
+  "age": 1
+ },
+ {
+  "id": "be1ea3f8-3e2a-4e04-86ac-1077b3865729",
+  "name": "Orejas",
+  "createdAt": "2023-01-27T11:50:08.6423976-05:00",
+  "updatedAt": "2023-01-27T16:43:17.101Z",
+  "specie": "Dog",
+  "sex": "Male",
+  "breed": "Golden Retriever",
+  "age": 1
+ },
+ {
+  "id": "1137e1ee-958b-441c-ae47-37f790b146ca",
+  "name": "Motita",
+  "createdAt": "2023-01-27T11:51:37.0786874-05:00",
+  "updatedAt": "2023-01-27T16:43:17.101Z",
+  "specie": "Cat",
+  "sex": "Male",
+  "breed": "British Shorthair",
+  "age": 1
+ },
+ {
+  "id": "9e284693-3764-4de8-a528-1e0bce68fc01",
+  "name": "Fiona",
+  "createdAt": "2023-01-27T11:52:07.0585557-05:00",
+  "updatedAt": "2023-01-27T16:43:17.101Z",
+  "specie": "Cat",
+  "sex": "Female",
+  "breed": "Birman",
+  "age": 1
+ },
+ {
+  "id": "aa5129de-4f4d-4e0e-b37c-20cc04c5f9cc",
+  "name": "Lucy",
+  "createdAt": "2023-01-30 11:13:04.1076548 -05:00",
+  "updatedAt": "",
+  "specie": "Dog",
+  "sex": "Female",
+  "breed": "Pomeranian",
+  "age": 12
+ },
+ {
+  "id": "24c97d18-be18-45d2-b3e5-a55c7aa6c3ef",
+  "name": "Bella",
+  "createdAt": "2023-01-30 11:13:04.1076548 -05:00",
+  "updatedAt": "",
+  "specie": "Dog",
+  "sex": "Female",
+  "breed": "Havanese",
+  "age": 5
+ },
+ {
+  "id": "5bdefc96-e051-4c60-819c-13c47d9afccb",
+  "name": "Sophie",
+  "createdAt": "2023-01-30T11:29:10-05:00",
+  "updatedAt": "",
+  "specie": "Dog",
+  "sex": "Female",
+  "breed": "Sheltie",
+  "age": 4
+ }
+]

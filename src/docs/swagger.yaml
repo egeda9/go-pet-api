@@ -1,0 +1,138 @@
+basePath: /api
+definitions:
+  model.CreatePet:
+    properties:
+      age:
+        type: number
+      breed:
+        type: string
+      name:
+        type: string
+      sex:
+        type: string
+      specie:
+        type: string
+    type: object
+info:
+  contact: {}
+  description: Pets API
+  title: Pets API
+  version: "1.0"
+paths:
+  /helloworld/{id}:
+    get:
+      consumes:
+      - application/json
+      description: get by id. "id" property
+      parameters:
+      - description: Unique Id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+      summary: Find by id
+      tags:
+      - hello_world
+  /pet:
+    get:
+      consumes:
+      - application/json
+      description: get pets
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+      summary: Find
+      tags:
+      - pet
+    post:
+      consumes:
+      - application/json
+      description: post a new pet
+      parameters:
+      - description: Pet
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/model.CreatePet'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: json
+      summary: Create a new pet
+      tags:
+      - pet
+  /pet/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete a pet
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+      summary: Delete a pet
+      tags:
+      - pet
+    get:
+      consumes:
+      - application/json
+      description: get by id. "id" property
+      parameters:
+      - description: Unique Id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+      summary: Find by id
+      tags:
+      - pet
+    put:
+      consumes:
+      - application/json
+      description: update a pet
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Pet
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/model.CreatePet'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: json
+      summary: Update a pet
+      tags:
+      - pet
+swagger: "2.0"
