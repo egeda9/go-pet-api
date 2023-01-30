@@ -1,4 +1,4 @@
-# PETs API (Go)
+# PETS API (Go)
 
 ## REST API Microservice
 
