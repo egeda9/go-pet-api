@@ -168,9 +168,27 @@ STORAGE_FILE_PATH=./pets.json
 
 ---
 
-### Accessing the API (From a local docker deployment)
+### Docker deployment
 
-Local Swagger Endpoint [Swagger](http://localhost:8080/swagger/index.html).
+#### Building the image
+
+
+```
+DOCKER_BUILDKIT=1 docker build -t go-pets-api -f Dockerfile .
+```
+
+This will build the image from the Dockerfile in the **/src** directory—the period at the end—and tag it with go-pets-api:latest, with go-pets-api being the image name and latest being the tag name.
+
+#### Create and run the container
+
+```
+docker run -d -p 7991:80 --name go-pets-api go-pets-api:latest
+```
+
+- **-d**: This is short for detach and means that the Docker container will run in the background.
+- **-p 7991:80**: This publishes the port 80 of the container as the port 7991 on the host. Thanks to that, the API will be available on the host at http://localhost:7991/swagger.
+- **–name go-pets-api**: The container will be available under the name go-pets-api. 
+- **go-pets-api**: This is the name of the image we want to use to create the container.
 
 ### Open API definition (rest-api)
 
