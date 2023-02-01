@@ -210,3 +210,162 @@ gcloud run deploy --source . --update-env-vars ENV=Development,STORAGE_FILE_PATH
 - Enable **Artifact Registry API**
 - Select region **us-east1**
 - Allow unauthenticated invocations
+
+
+# REST API
+
+The REST API to the pets api is described below.
+
+## Get list of Pets
+
+### Request
+
+`GET /api/pet`
+
+    curl -X 'GET' \
+    '{host}/api/pet' \
+    -H 'accept: application/json'
+
+### Response
+
+``` json
+{
+  "data": [
+    {
+      "id": "a9dbb813-8ac8-4365-8acb-923878b7b437",
+      "name": "Lupe",
+      "createdAt": "2023-01-27T11:44:02.0268285-05:00",
+      "updatedAt": "2023-01-27T16:43:17.101Z",
+      "specie": "Dog",
+      "sex": "Female",
+      "breed": "Poodle",
+      "age": 1
+    },
+    {
+      "id": "df78a87b-2a21-4480-aa43-d90dd85ff8c9",
+      "name": "Canela",
+      "createdAt": "2023-01-27T11:44:31.5572417-05:00",
+      "updatedAt": "2023-01-27T16:43:17.101Z",
+      "specie": "Dog",
+      "sex": "Female",
+      "breed": "Labrador Retriever",
+      "age": 1.9
+    }
+  ]
+}
+```
+
+## Get a specific Pet
+
+### Request
+
+`GET /api/pet/:id`
+
+  curl -X 'GET' \
+  '{host}/api/pet/df78a87b-2a21-4480-aa43-d90dd85ff8c9' \
+  -H 'accept: application/json'
+
+### Response
+
+``` json
+{
+  "data": {
+    "id": "df78a87b-2a21-4480-aa43-d90dd85ff8c9",
+    "name": "Canela",
+    "createdAt": "2023-01-27T11:44:31.5572417-05:00",
+    "updatedAt": "2023-01-27T16:43:17.101Z",
+    "specie": "Dog",
+    "sex": "Female",
+    "breed": "Labrador Retriever",
+    "age": 1.9
+  }
+}
+```
+
+## Create a new Pet
+
+### Request
+
+`POST /api/pet`
+
+    curl -X 'POST' \
+	'{host}/api/pet' \
+	-H 'accept: application/json' \
+	-H 'Content-Type: application/json' \
+	-d '{
+	"age": 5,
+	"breed": "German Shepherd",
+	"name": "Riley",
+	"sex": "Male",
+	"specie": "Dog"
+}'
+
+### Response
+
+``` json
+{
+  "data": {
+    "id": "d9d7fe36-2892-483b-848a-641ba9a9a600",
+    "name": "Riley",
+    "createdAt": "2023-02-01T16:31:46Z",
+    "updatedAt": "",
+    "specie": "Dog",
+    "sex": "Male",
+    "breed": "German Shepherd",
+    "age": 5
+  }
+}
+```
+
+## Update a Pets's property
+
+### Request
+
+`PUT /api/pet/:id`
+
+  curl -X 'PUT' \
+  '{host}/api/pet/d9d7fe36-2892-483b-848a-641ba9a9a600' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "age": 6,
+  "breed": "German Shepherd",
+  "name": "Riley",
+  "sex": "Male",
+  "specie": "Dog"
+}'
+
+### Response
+
+``` json
+{
+  "data": {
+    "id": "d9d7fe36-2892-483b-848a-641ba9a9a600",
+    "name": "Riley",
+    "createdAt": "2023-02-01T16:31:46Z",
+    "updatedAt": "2023-02-01T16:38:43Z",
+    "specie": "Dog",
+    "sex": "Male",
+    "breed": "German Shepherd",
+    "age": 6
+  }
+}
+```
+
+## Delete a Pet
+
+### Request
+
+`DELETE /api/pet/:id`
+
+  curl -X 'DELETE' \
+  '{host}/api/pet/d9d7fe36-2892-483b-848a-641ba9a9a600' \
+  -H 'accept: application/json'
+
+### Response
+
+``` json
+{
+  "data": "OK"
+}
+```
