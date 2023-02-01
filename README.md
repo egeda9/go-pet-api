@@ -203,7 +203,7 @@ The REST API app is described below.
 - In the source code directory (/src), deploy from source.
 
 ```
-gcloud run deploy --source . --update-env-vars ENV=Development,STORAGE_FILE_PATH=./pets.json
+gcloud run deploy --source . --update-env-vars ENV=Development,STORAGE_FILE_PATH=../build/data/pets.json
 ```
 
 - Specify service name

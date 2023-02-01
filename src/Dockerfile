@@ -39,9 +39,5 @@ RUN cp /build/main .
 # Export necessary port
 EXPOSE 8080
 
-# For local run: In windows from %APPDATA%/gcloud/ take and copy to the src folder the credentials file. Before, use 'gcloud auth login' from the command line to refresh the tokens. Enable the next 2 lines
-#RUN mkdir -p ../gcp/config
-#COPY ["application_default_credentials.json", "../gcp/config/"]
-
 # Command to run when starting the container
 CMD ["/dist/main"]
