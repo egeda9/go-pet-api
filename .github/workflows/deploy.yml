@@ -1,4 +1,4 @@
-name: Docker
+name: cloudrun-deploy
 
 on:
   push:
