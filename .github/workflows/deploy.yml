@@ -29,6 +29,9 @@ jobs:
         - name: Checkout repository
           uses: actions/checkout@v2
 
+        - name: Check agent structure
+          run: ls -a
+
         - name: Build Docker image
           run: docker build -f ../../src/Dockerfile . -t $IMAGE_NAME
 
