@@ -16,13 +16,13 @@ ENV GO111MODULE=on \
 WORKDIR /build
 
 # Copy and download dependency using go mod
-COPY go.mod .
-COPY go.sum .
+COPY src/go.mod .
+COPY src/go.sum .
 
 RUN go mod download
 
 # Copy the code into the container
-COPY . .
+COPY src/ .
 
 RUN go install github.com/swaggo/swag/cmd/swag@latest
 RUN swag init -g ./main.go -o ./docs
