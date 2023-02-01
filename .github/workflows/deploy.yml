@@ -32,7 +32,7 @@ jobs:
         - name: Check agent structure
           run: cd src
 
-          name: Check agent structure1
+          name: Check agent folder
           run: ls -a
 
         - name: Build Docker image
