@@ -190,8 +190,23 @@ docker run -d -p 7991:80 --name go-pets-api go-pets-api:latest
 - **–name go-pets-api**: The container will be available under the name go-pets-api. 
 - **go-pets-api**: This is the name of the image we want to use to create the container.
 
-### Open API definition (rest-api)
+### Open API definition
 
 The REST API app is described below.
 
 [Open API Definition](./src/docs/swagger.json)
+
+### gcloud - cloud run deployment
+
+#### Deploy to Cloud Run from source
+
+- In the source code directory (/src), deploy from source.
+
+```
+gcloud run deploy --source . --update-env-vars ENV=Development,STORAGE_FILE_PATH=./pets.json
+```
+
+- Specify service name
+- Enable **Artifact Registry API**
+- Select region **us-east1**
+- Allow unauthenticated invocations
