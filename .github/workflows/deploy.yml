@@ -30,7 +30,7 @@ jobs:
           uses: actions/checkout@v2
 
         - name: Check agent structure
-          run: ls -a
+          run: cd src
 
         - name: Build Docker image
           run: docker build -f ../../src/Dockerfile . -t $IMAGE_NAME
