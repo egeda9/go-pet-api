@@ -135,7 +135,7 @@ ENV=development
 STORAGE_FILE_PATH=./pets.json
 ```
 
-### [infra](infra/) folder and env settings
+### [infra](.github/workflows/) folder and env settings
 
 - Deployment definition (per environment)
 - Environment variables definition (per environment)
